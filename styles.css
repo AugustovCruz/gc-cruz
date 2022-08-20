@@ -1,0 +1,224 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: #f7f7f7;
+}
+.listaNav a:hover {
+    color: #2AE0F9;
+}
+/* header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Titulo*/
+.title{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 32px;
+    font-style: italic;
+    width: 370px;
+    color: white;
+    text-align: center;
+    background-color: #191736;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 50px;
+}
+/*Barra de navegacion */
+.navbar {
+    width: 100%;
+}
+.listaNav {
+    display: flex;
+    justify-content: center;
+    background-color: #191736; 
+    text-align: center;
+    margin: 0px;
+    padding: 35px;
+    }
+/*Elementos del NavBar*/
+.listaNav li {
+    display: inline-block;
+    margin: 5px 40px;
+}
+.listaNav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    }
+/*Fin de barra de navegacion */
+/*Banner */
+.imgBanner img {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    margin: 15px 0px;
+    box-shadow: #383838 -7px 7px 20px 0px;
+}
+/*logos de marcas */
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 25px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.logos img {
+    height:auto;
+    width:170px;
+    border-radius: 10px;
+    box-shadow: #383838 -7px 7px 20px 0px;
+}
+fieldset {
+    padding: 100px;
+    margin: 100px;
+}
+/* Grid Productos*/
+.container-productos img {
+    height: 170px;
+    width: 180px;
+    box-shadow: #dddada -7px 7px 20px 0px;
+}
+.container-productos { 
+    min-height: 60vh;
+    margin: 55px 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px 0px;
+    align-items: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8";
+}
+/* Ofertas */
+.text-off {
+    color: red;
+    text-align: center;
+    margin: 45px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ofertas img {
+    height: 150px;
+    width: 160px;
+    box-shadow: #dddada -7px 7px 20px 0px;
+}
+.ofertas {
+    min-height:50vh;
+    margin: 90px auto;
+    gap: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items : center;
+    flex-wrap: wrap;
+}
+.us {
+    min-height: 70vh;
+}
+/* Pie de pagina*/
+footer {
+    background-color: #191736;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    color: white;
+    padding: 0px 20px;
+}
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.redes img {
+    justify-content: space-between;
+}
+/* Media querys*/   
+@media (max-width: 810px) {
+    /*HTML inicio*/
+    .listaNav {
+        flex-direction: column;
+        padding: 5px ;
+        gap: 5px;
+    }
+    .logos img {
+        height: auto;
+        width: 100px;
+    }
+    .redes {
+        gap:8px;
+    }
+    /*HTML productos*/
+    .container-productos {
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat( 4, 1fr);
+        grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8";
+    }
+    .container-productos img {
+        height: 200px;
+        width: 220px;
+    }
+    /*HTML ofertas*/
+    .ofertas img {
+        height: 200px;
+        width: 240px;
+    }
+    /*HTML nosotros*/
+    .map-us iframe{
+        height: 350px;
+        width: 400px;
+    }
+}
+@media (max-width:540px) {
+    /*HTML inicio*/
+    .title {
+        width: 180px;
+        font-size: 18px;
+    }
+    .listaNav li a{
+        font-size: 12px;
+    }
+    .logos img {
+        height: auto;
+        width: 150px;
+    }
+    footer {
+        font-size: 8px;
+    }
+    /*HTML productos*/
+    .container-productos img {
+        height: 100px;
+        width: 120px;
+    }
+    /*HTML ofertas*/
+    .ofertas img {
+        height: 160px;
+        width: 200px;
+    }
+    /*HTML contacto*/
+    fieldset {
+        padding: 20px;
+        margin: 20px;
+    }    
+    /*HTML nosotros*/
+    .map-us iframe{
+        height: 200px;
+        width: 250px;
+    }
+}
+
