@@ -31,6 +31,13 @@ header {
     padding: 20px;
     border-radius: 50px;
 }
+/* Animaciones para GITHUB*/
+.title:hover {
+    background-color: #2AE0F9;
+    color: black;
+    transform: skew(-15deg);
+    transition: .7s;
+}
 /*Barra de navegacion */
 .navbar {
     width: 100%;
